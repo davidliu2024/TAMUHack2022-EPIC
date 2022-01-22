@@ -1,0 +1,20 @@
+## General Web developing ##
+https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/
+
+## HTML ##
+
+## Javascript ##
+
+## CSS ##
+
+## Python ##
+
+## API's ##
+
+## Server management ##
+
+## General front-end ##
+
+## General back-end ##
+
+## Miscellaenous ##
