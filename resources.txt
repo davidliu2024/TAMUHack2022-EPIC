@@ -15,6 +15,7 @@ https://medium.com/@racullum/how-to-create-a-modern-html-form-with-css-1dd0f3d49
 ## Server management ##
 
 ## General front-end ##
+https://www.w3.org/Style/Examples/011/firstcss.en.html
 
 ## General back-end ##
 
