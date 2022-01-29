@@ -1,6 +1,6 @@
-# (Project Name)
+# Boys Over Flowers
 
-(Project Name) is a social media application that allows users to explore photos of flowers, trees, animals and more across the U.S
+Boys Over Flowers is a social media application that allows users to explore photos of flowers, trees, animals and more across the U.S
 
 ## Usage
 The website's targeted audience are nature enthusiasts who love to scroll through photos taken at various different places by various different people.
