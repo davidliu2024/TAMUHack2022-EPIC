@@ -49,3 +49,12 @@ input[type=submit] {
     cursor: pointer;
     border-radius: 4px 4px;
 }
+
+input[type=states] {
+	background: rgba(255, 255, 255,.2);
+	width: 100%;
+	padding: 2vh;
+	border: 2vh;
+	cursor: pointer;
+	border-radius: 4px 4px;
+}

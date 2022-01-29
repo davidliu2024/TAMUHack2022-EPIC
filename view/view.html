@@ -8,7 +8,57 @@ body, html {
     margin: 0;
 }
 
+#overlay {
+	position: absolute;
+	width: 10%;
+	height: 10%;
+	top: 400px;
+	right: 625px;
+	width: 110px;
+	height: 80px;
+	background: rgb(216, 21, 21) center center no-repeat;)
+	background-size: 80px;
+	z-index: 1;
+	opacity: .1;
+}
 
+#overlay2 {
+	position: absolute;
+	width: 10%;
+	height: 10%;
+	top: 200px;
+	right: 400px;
+	width: 110px;
+	height: 80px;
+	background: rgb(216, 21, 21) center center no-repeat;)
+	background-size: 80px;
+	z-index: 1;
+	opacity: .7;
+}
+
+#overlay3 {
+	position: absolute;
+	width: 10%;
+	height: 10%;
+	top: 400px;
+	right: 800px;
+	width: 110px;
+	height: 80px;
+	background: rgb(216, 21, 21) center center no-repeat;)
+	background-size: 80px;
+	z-index: 1;
+	opacity: .1;
+}
+
+.block {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	height: 80px;
+	cursor: pointer;
+	text-align: center;
+}
 
 .bg {
     /* The image used */
@@ -28,11 +78,22 @@ body, html {
 </head>
 <body>
 
-<a href="../texas/texas.html"><input type="button" id="texas_button" value="  tx  "><br></a>
-<a href="../oregon/oregon.html"><input type="button" id="oregon_button" value="  or  "><br></a>
-<a href="../newyork/newyork.html"><input type="button" id="newyork_button" value="  ny  "><br></a>
-
-<div class="bg"></div>
+<div class="bg">
+		<a href="../texas/texas.html">
+			<input type="button" id="texas_button" value="  tx  " class = "block" style = 'position: relative; left:50px; bottom:50px'><br>
+		</a>
+		
+	
+	<div id="overlay2">
+		<a href="../oregon/oregon.html">
+			<input type="button" id="texas_button" value="  or  " class = "block"><br>
+		</a>
+	<div/>
+	
+	<div id="overlay3">
+		<a href="../newyork/newyork.html"><input type="button" id="texas_button" value="  ny  " class = "block"><br></a>
+	<div/>
+</div>
 
 </body>
 </html>
