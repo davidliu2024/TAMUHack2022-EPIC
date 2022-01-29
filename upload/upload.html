@@ -55,14 +55,14 @@
         <a href="../thankyou.html"><input type="submit" value="Submit"></a>
     </form>
 
-    <form name="form" method="post" action="upload.php" enctype="multipart/form-data">
-        <label for="img">Select image:</label>
-        <input type="file" id="img" name="img" accept="image/*">
-        <input type="submit">
+    <form method="POST" action="" enctype="multipart/form-data">        
+        <input type="file" name="choosefile" value="" />
+        <div>
+            <button type="submit" name="uploadfile">UPLOAD</button>
+        </div>
     </form>
 
     </div>
-
 
     <div class="dropdown">
         <button class="dropbtn">Dropdown</button>
