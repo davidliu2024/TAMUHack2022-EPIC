@@ -8,7 +8,7 @@ body, html {
     margin: 0;
 }
 
-.oregon {
+.or {
 	position: absolute;
 	top: 115px;
 	right: 930px;
@@ -16,7 +16,7 @@ body, html {
 	height: 10%;
 	cursor: pointer;
 	z-index: 1;
-	opacity: .4;
+	opacity: 0;
 	background-color: red;
 }
 
@@ -26,13 +26,26 @@ input[type=submit] {
 
 .ny {
 	position: absolute;
-	top: 200px;
-	right: 100px;
-	height: 80px;
+	top: 140px;
+	right: 320px;
+	height: 60px;
+	width: 50px;
 	cursor: pointer;
 	z-index: 1;
-	opacity: .3;
+	opacity: 0;
 	background-color: blue;
+}
+
+.tx {
+	position: absolute;
+	top: 400px;
+	right: 600px;
+	height: 95px;
+	width: 150px;
+	cursor: pointer;
+	z-index: 1;
+	opacity: 0;
+	background-color: green;
 }
 
 .bg {
@@ -62,13 +75,27 @@ input[type=submit] {
 		<!-- <a href="../states_html/oregon.html"> -->
 			<!-- <input type="button" id="oregon_button" value="  or  " class="oregon" ><br> -->
 		<!-- </a> -->
-		<label for="o_button" class="oregon">
+		
+		<label for="o_button" class="or">
 			<i></i> 
 		</label>
+		<form method="POST" action="http://localhost:5000/states">
+			<input id="o_button" type="submit" value="oregon" name="Oregon">
+		</form>
 		
-			<form method="POST" action="http://localhost:5000/states">
-				<input id="o_button" type="submit" value="oregon" name="Oregon">
-			</form>
+		<label for="n_button" class="ny">
+			<i></i> 
+		</label>
+		<form method="POST" action="http://localhost:5000/states">
+			<input id="n_button" type="submit" value="newyork" name="NewYork">
+		</form>
+		
+		<label for="t_button" class="tx">
+			<i></i> 
+		</label>
+		<form method="POST" action="http://localhost:5000/states">
+			<input id="t_button" type="submit" value="texas" name="Texas">
+		</form>
 	
 	<div>
 		<a href="../newyork/newyork.html"><input type="button" id="texas_button" value="  ny  " class = "ny"><br></a>
