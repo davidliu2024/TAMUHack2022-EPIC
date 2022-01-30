@@ -11,8 +11,17 @@
   <body id="body">
     <div class="formContainer">
       <h1>Welcome</h1>
-        <a href="./view/view.html"><input type="button" id="view_button" value="  View  "><br></a>
-        <a href="./upload/upload.html"><input type="button" id="upload_button" value="Upload"><br></a>
+        <a href="./view/view.html"><input type="button" id="view_button" value="  View  "></a></br>
+		
+		<a class = "special">
+			<label for="up" class="upload">
+				Upload <i></i> 
+			</label>
+		</a>
+		<form method="POST" action="http://localhost:5000/states">
+			<input id="up" type="submit" value="upload" name="Upload">
+		</form>
+		
       </form>
     </div>
   </body>

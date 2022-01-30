@@ -44,12 +44,7 @@ body {
   }
   
   input[type=submit] {
-    background: rgba(255,255,255,.2);
-    width: 100%;
-    padding: 2vh;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px 4px;
+    display: none;
   }
 
   input[type=button] {
@@ -59,5 +54,15 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 10px 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18pt;
   }
 
+.upload {
+	background: rgba(255,255,255,.2);
+    width: 100%;
+    padding: 5vh;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px 10px;
+}

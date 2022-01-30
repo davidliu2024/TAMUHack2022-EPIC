@@ -112,11 +112,16 @@
 			min-height: 100%;
 			z-index: -1;
 		}
+		
 		.text {
 			position: absolute;
 			margin: 30px 100px 100px;
 			height: 100%;
 			width: 100%;
+		}
+		
+		input[type=submit] {
+		display: none;
 		}
     </style>
 </head>
@@ -127,8 +132,14 @@
         <a href="../view/view.html"><i class="material-icons">map</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;view</a></span>
         </a><br>
         <a href="../upload/upload.html"><i class="material-icons">input</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;upload</span></a><br>
-		<a href="#"><i class="material-icons">redo</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;next</span></a><br>
-		<a href="#"><i class="material-icons">undo</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;back</span></a><br>
+		<label for="next_button">
+			<a><i class="material-icons">redo</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;next</span><br></a>
+		</label>
+	
+		<form id = "next_button" method="POST" action="/nextImg/{{st}}">
+			<input type="submit" value = "next" name = "Next">
+		</form>
+		
 		
     </div>
 
