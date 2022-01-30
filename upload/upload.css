@@ -8,6 +8,14 @@ body {
     color: white;
 }
 
+body h1 {
+	text-align: center;
+}
+
+body h {
+	text-align: center;
+}
+
 .formContainer {
     display: flex;
     justify-content: center;
@@ -21,7 +29,7 @@ body {
 }
 
 .formContainer h1 {
-    padding: 2vh;
+	padding: 2vh;
 }
 
 input {
@@ -42,9 +50,10 @@ input[type=text]::placeholder {
 }
 
 input[type=submit] {
-    background: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.3);
+	font-family: 'Roboto', sans-serif;
     width: 100%;
-    padding: 2vh;
+    padding: 6px 12px;
     border: none;
     cursor: pointer;
     border-radius: 4px 4px;
@@ -57,4 +66,25 @@ input[type=states] {
 	border: 2vh;
 	cursor: pointer;
 	border-radius: 4px 4px;
+}
+
+input[type=form] {
+	background: rgba(255, 255, 255,.2);
+	width: 100%;
+	padding: 2vh;
+	border: 2vh;
+	cursor: pointer;
+	border-radius: 4px 4px;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.custom-file-upload {
+	border-radius: 4px 4px;
+	display: inline-block;
+	padding: 6px 12px;
+	cursor: pointer;
+	background: rgba(255, 255, 255,1);
 }

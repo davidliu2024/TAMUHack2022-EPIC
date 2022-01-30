@@ -37,6 +37,10 @@
         .dropdown:hover .dropdown-content {display: block;}
         
         .dropdown:hover .dropbtn {background-color: #3e8e41;}
+		
+		h {
+			position: center;
+		}
     </style>
 	
 
@@ -46,7 +50,27 @@
     <link href="./upload.css" rel="stylesheet">
     <title>Upload a photo</title>
 </head>
-<h> Select a state:
+
+	
+	<script type="text/javascript">
+    function getOption() {
+        selectElement = document.querySelector('#select1');
+        output = selectElement.value;
+        document.querySelector('.output').textContent = output;
+    }
+    </script>
+
+<body id="body">
+    <div class="formContainer">
+    <h1>Add a picture</h1><br>
+
+        <input type="text" id="name" name="name" placeholder="Name of flower" onfocus="this.placeholder=''" onblur="this.placeholder='Name of flower'">
+
+	<br>
+	
+	<input type="text" id="name" name="name" placeholder="Description of flower" onfocus="this.placeholder=''" onblur="this.placeholder='Description of flower'">
+	
+	<h> Select a state:
         <select id="state">
 			<option value="Alabama">Alabama</option>
 			<option value="Alaska">Alaska</option>
@@ -100,28 +124,20 @@
 			<option value="Wyoming">Wyoming</option>
         </select>
     </h>
+	<br>
+	<label for="file-upload" class="custom-file-upload">
+		<i class="fa fa-cloud-upload"></i> File Upload
+	</label>
+	<h>
+		<form method="POST" action="" enctype="multipart/form-data">        
+			<input id="file-upload" type="file" name="&nbsp choosefile" value="" />
+		</form>
+	</h>
+	<br>
+		<div>
 	
-	<script type="text/javascript">
-    function getOption() {
-        selectElement = document.querySelector('#select1');
-        output = selectElement.value;
-        document.querySelector('.output').textContent = output;
-    }
-    </script>
-
-<body id="body">
-    <div class="formContainer">
-    <h1>Add a picture</h1>
-
-        <input type="text" id="name" name="name" placeholder="Name of flower" onfocus="this.placeholder=''" onblur="this.placeholder='Name'"><br>
-
-    <form method="POST" action="" enctype="multipart/form-data">        
-        <input type="file" name="choosefile" value="" />
-    </form>
-	
-	<div>
-            <a href="../view/view.html"><input type="submit" value=" Submit "></a>
-        </div>
+			<a href="../view/view.html"><input type="submit" value=" Submit "></a>
+		</div>
 
     </div
 	

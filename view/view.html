@@ -16,8 +16,12 @@ body, html {
 	height: 10%;
 	cursor: pointer;
 	z-index: 1;
-	opacity: 0;
+	opacity: .4;
 	background-color: red;
+}
+
+input[type=submit] {
+	display: none;
 }
 
 .ny {
@@ -30,7 +34,6 @@ body, html {
 	opacity: .3;
 	background-color: blue;
 }
-
 
 .bg {
     /* The image used */
@@ -56,9 +59,16 @@ body, html {
 		</a>
 		
 	
-		<a href="../states_html/oregon.html">
-			<input type="button" id="oregon_button" value="  or  " class="oregon" ><br>
-		</a>
+		<!-- <a href="../states_html/oregon.html"> -->
+			<!-- <input type="button" id="oregon_button" value="  or  " class="oregon" ><br> -->
+		<!-- </a> -->
+		<label for="o_button" class="oregon">
+			<i></i> 
+		</label>
+		
+			<form method="POST" action="http://localhost:5000/states">
+				<input id="o_button" type="submit" value="oregon" name="Oregon">
+			</form>
 	
 	<div>
 		<a href="../newyork/newyork.html"><input type="button" id="texas_button" value="  ny  " class = "ny"><br></a>
