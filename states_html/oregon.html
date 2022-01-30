@@ -121,7 +121,7 @@
 		}
 		
 		input[type=submit] {
-		display: none;
+			display: none;
 		}
     </style>
 </head>
@@ -131,17 +131,17 @@
     <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
         <a href="../view/view.html"><i class="material-icons">map</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;view</a></span>
         </a><br>
-        <a href="../upload/upload.html"><i class="material-icons">input</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;upload</span></a><br>
-		<label for="next_button">
-			<a><i class="material-icons">redo</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;next</span><br></a>
-		</label>
+        <a href="../upload/upload.html"><i class="material-icons">input</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;upload</span></a><br>	
+		<a>	
+			<label for="next_button">
+				<i class="material-icons">redo</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;next</span>
+			</label>
+		</a>
+	</div>
 	
-		<form id = "next_button" method="POST" action="/nextImg/{{st}}">
-			<input type="submit" value = "next" name = "Next">
-		</form>
-		
-		
-    </div>
+	<form method="POST" action="/nextImg/{{st}}">
+		<input id = "next_button" type="submit" value = "next" name = "Next">
+	</form>
 
 	<div id="mySidebar2" class="sidebar2" onmouseover="toggleSidebar2()" onmouseout="toggleSidebar2()">
 		<div >
