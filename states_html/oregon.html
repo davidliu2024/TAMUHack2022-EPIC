@@ -1,32 +1,191 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-    height: 100%;
-    margin: 0;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/3.3.7/css/bootstrap.min.css">
 
-
-
-.bg {
-    /* The image used */
-    background-image: url("./maps/oregon_map.png");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-color: #e5f5f9;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-</style>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+        
+        .sidebar {
+            height: 100%;
+            width: 85px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            white-space: nowrap;
+			opacity: .5;
+        }
+		
+		.sidebar2 {
+            height: 100%;
+            width: 85px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgb(0,0,0,.5);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            white-space: nowrap;
+			opacity: 1;
+        }
+        
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+		
+		.sidebar2 a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .material-icons,
+        .icon-text {
+            vertical-align: middle;
+        }
+        
+		.materials-icons2,
+		.icon-text2{
+			horizontal-allign: middle;
+		}
+		
+        .material-icons {
+            padding-bottom: 3px;
+        }
+        
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+            margin-left: 100px;
+			
+        }
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+		
+		#bg {
+			position: fixed; 
+			top: 0; 
+			left: 0; 
+	
+			/* Preserve aspet ratio */
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -1;
+		}
+		.text {
+			position: absolute;
+			margin: 30px 100px 100px;
+			height: 100%;
+			width: 100%;
+		}
+    </style>
 </head>
+
 <body>
 
-<div class="bg"></div>
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <a href="#"><span><i class="material-icons">info</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;about</span></a><br>
+        <a href="#"><i class="material-icons">map</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;view</a></span>
+        </a><br>
+        <a href="#"><i class="material-icons">input</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;upload</span></a><br>
+		<a href="#"><i class="material-icons">redo</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;next</span></a><br>
+		<a href="#"><i class="material-icons">undo</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;back</span></a><br>
+		
+    </div>
+
+	<div id="mySidebar2" class="sidebar2" onmouseover="toggleSidebar2()" onmouseout="toggleSidebar2()">
+		<div >
+			
+		</div>
+		<div class="text">
+			<a color:rgb(256,256,256,1);>
+				"text"
+			</a>
+			<a href="#"><i class="material-icons2"></i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;<</span></a><br>
+		</div>
+	</div>
+	
+	<div>
+		<img src="../background.png" id="bg" alt="">
+		
+	</div>
+	
+    <div id="main">
+        <img src="../daniel wang.PNG">
+    </div>
+
+
+    <script>
+        var mini = true;
+
+        function toggleSidebar() {
+            if (mini) {
+                console.log("opening sidebar");
+                document.getElementById("mySidebar").style.width = "500px";
+                document.getElementById("main").style.marginLeft = "0px";
+                this.mini = false;
+            } else {
+                console.log("closing sidebar");
+                document.getElementById("mySidebar").style.width = "85px";
+                document.getElementById("main").style.marginLeft = "85px";
+                this.mini = true;
+            }
+        }
+		function toggleSidebar2() {
+            if (mini) {
+                console.log("opening sidebar");
+                document.getElementById("mySidebar2").style.width = "700px";
+                document.getElementById("main").style.marginRight = "0px";
+                this.mini = false;
+            } else {
+                console.log("closing sidebar");
+                document.getElementById("mySidebar2").style.width = "85px";
+                document.getElementById("main").style.marginRight = "85px";
+                this.mini = true;
+            }
+        }
+    </script>
+
 </body>
+
 </html>
